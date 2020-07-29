@@ -1,11 +1,8 @@
 function convertJsonInCsv() {
   function start() {
-    const value = document.getElementById("json").value;
-    convert(JSON.parse(value));
-  }
-
-  function convert(obj) {
     try {
+      const value = document.getElementById("json").value;
+      const obj = JSON.parse(value);
       if (Array.isArray(obj)) {
         const header = Object.keys(obj[0]);
         const text = obj.map((value) => format(Object.values(value)));
@@ -16,7 +13,7 @@ function convertJsonInCsv() {
         setPreview(header, text);
       }
     } catch (e) {
-      alert(`Erro: ${e}`);
+      alert(`JSON Inválido Erro \n ${e}`);
     }
   }
 

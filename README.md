@@ -25,8 +25,8 @@ permite ao usuário colar JSON em uma caixa de texto para gerar seu CSV equivale
 - [x] O usuário pode colar a sintaxe JSON em uma caixa de texto
 - [x] O usuário pode clicar no botão 'Converter' para validar a caixa de texto JSON e convertê-la em CSV
 - [x] O usuário pode ver o CSV convertido em outra caixa de textox
-- [ ] O usuário pode ver uma mensagem de aviso se a caixa de texto JSON estiver vazia ou se não contiver JSON válido
-- [ ] O usuário pode clicar no botão 'Limpar' para limpar o conteúdo das caixas de texto JSON e CSV
+- [x] O usuário pode ver uma mensagem de aviso se a caixa de texto JSON estiver vazia ou se não contiver JSON válido
+- [x] O usuário pode clicar no botão 'Limpar' para limpar o conteúdo das caixas de texto JSON e CSV
 
 ## Bonus features
 
