@@ -4,36 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,300;1,500&display=swap"
+      rel="stylesheet"
+    />
     <script src="./scripts/convertJsonCsv.js"></script>
     <script src="./scripts/downloadCsv.js"></script>
     <script src="./scripts/hiddenShow.js"></script>
-
     <title>JSON 2 CSV</title>
   </head>
   <body>
     <form>
-      <select name="jsonSelect" id="jsonSelect" onchange="changejsonSelect()">
-        <option value="digitar">Digitar </option>
-        <option value="selecionar">Selecionar Arquivo</option>
-      </select>
-      <input
-        type="file"
-        name="jsonInputFile"
-        id="jsonInputFile"
-        onchange="onChangeJesonInputFile()"
-        accept="document/json"
-      />
-      <textarea
-        name="jsonTextarea"
-        id="jsonTextarea"
-        rows="5"
-        cols="33"
-      ></textarea>
-      <textarea name="csvTextearea" id="csvTextearea" rows="5" cols="33">
-      </textarea>
-      <button type="button" onclick="convertJsonInCsv()">Converter</button>
-      <button type="button" onclick="clickButtonDownload()">Download</button>
-      <button type="reset">
+      <h1>JSON 2 CSV</h1>
+      <main>
+        <section class="first">
+          <span>JSON</span>
+          <select id="jsonSelect" onchange="changejsonSelect()">
+            <option value="digitar">Digitar </option>
+            <option value="selecionar">Selecionar Arquivo</option>
+          </select>
+          <input
+            type="file"
+            id="jsonInputFile"
+            onchange="onChangeJesonInputFile()"
+            accept="document/json"
+          />
+          <textarea id="jsonTextarea" rows="5" cols="33"></textarea>
+          <button type="button" onclick="convertJsonInCsv()" class="primary">
+            Converter
+          </button>
+        </section>
+        <section class="secondy">
+          <span>CSV</span>
+          <textarea id="csvTextearea" rows="5" cols="33"></textarea>
+          <button type="button" onclick="clickButtonDownload()" class="primary">
+            Download
+          </button>
+        </section>
+      </main>
+
+      <button type="reset" class="danger">
         Limpar Tudo
       </button>
     </form>
