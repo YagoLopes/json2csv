@@ -7,20 +7,20 @@
     <script src="./scripts/convertJsonCsv.js"></script>
     <script src="./scripts/downloadCsv.js"></script>
     <script src="./scripts/hiddenShow.js"></script>
-    <script src="./scripts/uploadFile.js"></script>
+
     <title>JSON 2 CSV</title>
   </head>
   <body>
     <form>
       <select name="jsonSelect" id="jsonSelect" onchange="changejsonSelect()">
-        <option value="digitar">Digitar</option>
+        <option value="digitar">Digitar </option>
         <option value="selecionar">Selecionar Arquivo</option>
       </select>
       <input
         type="file"
         name="jsonInputFile"
-        onchange="changeInputFile()"
         id="jsonInputFile"
+        onchange="onChangeJesonInputFile()"
         accept="document/json"
       />
       <textarea
@@ -29,15 +29,14 @@
         rows="5"
         cols="33"
       ></textarea>
-      <textarea
-        name="csvTextearea"
-        id="csvTextearea"
-        rows="5"
-        cols="33"
-      ></textarea>
+      <textarea name="csvTextearea" id="csvTextearea" rows="5" cols="33">
+      </textarea>
       <button type="button" onclick="convertJsonInCsv()">Converter</button>
       <button type="button" onclick="clickButtonDownload()">Download</button>
-      <button type="reset">Limpar Tudo</button>
+      <button type="reset">
+        Limpar Tudo
+      </button>
     </form>
+    <script src="./scripts/uploadFile.js"></script>
   </body>
 </html>
