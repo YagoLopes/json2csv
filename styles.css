@@ -50,6 +50,7 @@ html body form {
   align-items: center;
   flex-direction: column;
   max-width: 90%;
+  margin-bottom: 50px;
 }
 
 html body form main {
@@ -87,7 +88,8 @@ html body form main section.secondy span {
 }
 
 html body form main section textarea {
-  width: 100%;
+  max-width: 100%;
+  min-width: 300px;
   height: 250px;
   padding: 12px 20px;
   box-sizing: border-box;
