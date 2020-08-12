@@ -8,41 +8,34 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <script src="./scripts/convertJsonCsv.js"></script>
-    <script src="./scripts/downloadCsv.js"></script>
     <title>JSON 2 CSV</title>
   </head>
   <body>
-    <form>
-      <main>
-        <section class="first">
-          <span>JSON</span>
-          <textarea id="jsonTextarea" rows="5" cols="33"></textarea>
-          <input
-            type="file"
-            id="jsonInputFile"
-            onchange="onChangeJesonInputFile()"
-            accept="document/json"
-          />
-        </section>
-        <section class="actions">
-          <button type="button" onclick="convertJsonInCsv()">
-            <i class="material-icons">play_arrow</i>
-          </button>
-          <button type="button" onclick="clickButtonDownload()" class="primary">
-            <i class="material-icons">get_app</i>
-          </button>
-          <button type="reset" class="danger">
-            <i class="material-icons">delete_forever</i>
-          </button>
-        </section>
-
-        <section class="secondy">
-          <span>CSV</span>
-          <textarea id="csvTextearea" rows="5" cols="33" disabled></textarea>
-        </section>
-      </main>
-    </form>
-    <script src="./scripts/uploadFile.js"></script>
+    <main>
+      <section class="first">
+        <span>Adicione um arquivo em JSON</span>
+        <input type="file" id="jsonInputFile" accept="document/json" />
+        <textarea id="jsonTextarea"></textarea>
+      </section>
+      <section class="actions">
+        <button type="button" id="conversor">
+          <i class="material-icons">play_arrow</i>
+        </button>
+        <button type="button" class="danger" id="clear">
+          <i class="material-icons">delete_forever</i>
+        </button>
+        <button type="button" class="primary" id="downloader">
+          <i class="material-icons">get_app</i>
+        </button>
+      </section>
+      <section class="secondy">
+        <span>Aqui está o seu CSV</span>
+        <textarea id="csvTextearea" disabled></textarea>
+      </section>
+    </main>
+    <script src="./scripts/convert.js"></script>
+    <script src="./scripts/download.js"></script>
+    <script src="./scripts/upload.js"></script>
+    <script src="./scripts/clear.js"></script>
   </body>
 </html>

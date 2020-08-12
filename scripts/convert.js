@@ -1,11 +1,10 @@
-function convertJsonInCsv() {
+document.getElementById("conversor").onclick = function () {
   const value = document.getElementById("jsonTextarea").value;
   try {
     const obj = JSON.parse(value);
-
     if (Array.isArray(obj)) {
       const header = Object.keys(obj[0]);
-      const text = obj.map((value) => format(Object.values(value)));
+      const text = obj.map(value => format(Object.values(value)));
       setPreview(header, text);
     } else {
       const header = Object.keys(obj);
@@ -24,4 +23,4 @@ function convertJsonInCsv() {
   function setPreview(header, text) {
     document.getElementById("csvTextearea").value = `${header}\n${text}`;
   }
-}
+};
